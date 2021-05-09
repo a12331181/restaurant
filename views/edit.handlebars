@@ -1,9 +1,49 @@
-<div class="container">
-  <div class="row">
+<div class="container" style="width: 50%">
+  <div class="d-flex flex-column mt-3">
     <form action="/restaurants/{{ restaurant._id }}?_method=PUT" method="POST">
-      <input type="text" placeholder="name" name="name" value="{{ restaurant.name }}">
-      <button class="btn btn-primary" type="submit">Save</button>
+      <div class="row mt-4">
+        <label class="col-4 text-center" for="name">
+          <h4>餐廳名字:</h4>
+        </label>
+        <input id="name" type="text" placeholder="name" name="name" value="{{ restaurant.name }}" style="width:200px">
+      </div>
+
+      <div class="row mt-4">
+        <label class="col-4 text-center" for="category">
+          <h4>類別:</h4>
+        </label>
+        <input id="category" type="text" placeholder="category" name="category" value="{{ restaurant.category }}"
+          style="width:200px">
+      </div>
+
+      <div class="row mt-4">
+        <label class="col-4 text-center" for="location">
+          <h4>地點:</h4>
+        </label>
+        <input id="location" type="text" placeholder="location" name="location" value="{{ restaurant.location }}"
+          style="width:300px">
+      </div>
+
+      <div class="row mt-4">
+        <label class="col-4 text-center" for="phone">
+          <h4>電話:</h4>
+        </label>
+        <input id="phone" type="text" placeholder="phone" name="phone" value="{{ restaurant.phone }}"
+          style="width:200px">
+      </div>
+
+      <div class="row mt-4">
+        <label class="col-4 text-center" for="rating">
+          <h4>評價:</h4>
+        </label>
+        <input id="rating" type="text" placeholder="rating" name="rating" value="{{ restaurant.rating }}"
+          style="width:200px">
+      </div>
+
+      <div class="mt-5 ml-3 d-flex justify-content-center">
+        <button class="btn btn-primary mr-2" type="submit">Save</button>
+        <a class="btn btn btn-outline-secondary" href="/" role="button">Back</a>
+      </div>
     </form>
-    <a class="btn btn btn-outline-secondary" href="/" role="button">back</a>
   </div>
 </div>

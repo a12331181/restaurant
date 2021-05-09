@@ -1,9 +1,64 @@
-<div class="container">
-  <div class="row">
+<div class="container" style="width: 50%">
+  <div class="d-flex flex-column mt-3">
     <form action="/restaurants" method="POST">
-      <input type="text" placeholder="name" name="name">
-      <button class="btn btn-primary" type="submit">Create</button>
+      <div class="row mt-4">
+        <label class="col-4 text-center" for="name">
+          <h4>餐廳名字:</h4>
+        </label>
+        <input id="name" type="text" placeholder="name" name="name" style="width:200px">
+      </div>
+      <div class="row mt-4">
+        <label class="col-4 text-center" for="name_en">
+          <h4>餐廳英文名字:</h4>
+        </label>
+        <input id="name_en" type="text" placeholder="name_en" name="name_en" style="width:200px">
+      </div>
+      <div class="row mt-4">
+        <label class="col-4 text-center" for="category">
+          <h4>類別:</h4>
+        </label>
+        <input id="category" type="text" placeholder="category" name="category" style="width:200px">
+      </div>
+      <div class="row mt-4">
+        <label class="col-4 text-center" for="image">
+          <h4>圖片:</h4>
+        </label>
+        <input id="image" type="text" placeholder="image" name="image" style="width:200px">
+      </div>
+      <div class="row mt-4">
+        <label class="col-4 text-center" for="location">
+          <h4>地點:</h4>
+        </label>
+        <input id="location" type="text" placeholder="location" name="location" style="width:200px">
+      </div>
+      <div class="row mt-4">
+        <label class="col-4 text-center" for="phone">
+          <h4>電話:</h4>
+        </label>
+        <input id="phone" type="text" placeholder="phone" name="phone" style="width:200px">
+      </div>
+      <div class="row mt-4">
+        <label class="col-4 text-center" for="google_map">
+          <h4>Google地圖:</h4>
+        </label>
+        <input id="google_map" type="text" placeholder="google_map" name="google_map" style="width:200px">
+      </div>
+      <div class="row mt-4">
+        <label class="col-4 text-center" for="rating">
+          <h4>評價:</h4>
+        </label>
+        <input id="rating" type="text" placeholder="rating" name="rating" style="width:200px">
+      </div>
+      <div class="row mt-4">
+        <label class="col-4 text-center" for="description">
+          <h4>描述:</h4>
+        </label>
+        <input id="description" type="text" placeholder="description" name="description" style="width:200px">
+      </div>
+      <div class="mt-5 ml-3 d-flex justify-content-center">
+        <button class="btn btn-primary" type="submit">Create</button>
+        <a class="btn btn btn-outline-secondary ml-2" href="/" role="button">back</a>
+      </div>
     </form>
-    <a class="btn btn btn-outline-secondary" href="/" role="button">back</a>
   </div>
 </div>

@@ -1,6 +1,6 @@
 <div class="container">
   <div class="d-flex justify-content-center">
-    <div class="search-bar mt-3 ml-5 col-5">
+    <div class="search-bar mt-3 col-5">
       <div class="search-bar-outer">
         <div class="search-bar-inner">
           <form action="/search">
@@ -11,23 +11,13 @@
               <div class="input-group-append">
                 <button class="btn btn-major" type="submit" id="search-button"><i class="fas fa-search"></i></button>
               </div>
-              <div>
+              <div class='ml-1'>
                 <a class="btn btn-primary" href="./restaurants/new" role="button">Create</a>
               </div>
             </div>
           </form>
         </div>
       </div>
-    </div>
-
-    <div class="ml-5">
-      <label for="sort"></label>
-      <select id="sort" class="form-control mt-2" name="sort" style="width:150px">
-        <option>A-Z</option>
-        <option>Z-A</option>
-        <option>類別</option>
-        <option>地區</option>
-      </select>
     </div>
   </div>
 </div>
@@ -55,6 +45,15 @@
             </div>
           </div>
         </a>
+        <div class="container mb-2">
+          <div class="d-grid gap-2 ml-4" role="group" aria-label="Basic outlined example">
+            <a class="btn btn-primary" href="/restaurants/{{ this._id }}/edit" role="button">Edit</a>
+            <form action="/restaurants/{{ this._id }}?_method=DELETE" method="POST" style="display: inline;">
+              <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+            <a class="btn btn btn-info" href="./restaurants/{{ this._id }}" role="button">Detail</a>
+          </div>
+        </div>
         {{/each}}
       </div>
     </div>
