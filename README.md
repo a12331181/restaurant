@@ -8,7 +8,7 @@
 ##### Download project by Terminal
 
 ```
-git clone https://github.com/a12331181/restaurant_withCRUD.git
+git clone https://github.com/a12331181/restaurant.git
 ```
 
 ##### Enter project directory
