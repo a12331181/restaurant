@@ -14,7 +14,7 @@ git clone https://github.com/a12331181/restaurant.git
 ##### Enter project directory
 
 ```
-cd restaurant_withCRUD
+cd restaurant
 ```
 
 ##### Install packages
