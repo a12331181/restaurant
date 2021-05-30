@@ -1,43 +1,71 @@
 <div class="container" style="width: 50%">
   <div class="d-flex flex-column mt-3">
+    <div class="row justify-content-center">
+      <h2 class="mt-4 ml-4" style="color:#88556d"><strong>修改餐廳資料</strong></h2>
+    </div>
+
     <form action="/restaurants/{{ restaurant._id }}?_method=PUT" method="POST">
-      <div class="row mt-4">
+      <div class="row mt-2">
         <label class="col-4 text-center" for="name">
-          <h4>餐廳名字:</h4>
+          <h5 class="mt-3">中文名:</h5>
         </label>
-        <input id="name" type="text" placeholder="name" name="name" value="{{ restaurant.name }}" style="width:200px">
+        <input id="name" type="text" placeholder="name" name="name" class="col-6 form-control mt-2" value="{{ restaurant.name }}" style="width:200px" required>
+      </div>
+      
+      <div class="row mt-2">
+        <label class="col-4 text-center" for="name_en">
+          <h5 class="mt-3">英文名:</h5>
+        </label>
+        <input id="name_en" type="text" placeholder="name_en" name="name_en" class="col-6 form-control mt-2" value="{{ restaurant.name_en }}" style="width:200px" required>
       </div>
 
-      <div class="row mt-4">
+      <div class="row mt-2">
         <label class="col-4 text-center" for="category">
-          <h4>類別:</h4>
+          <h5 class="mt-3">類別:</h5>
         </label>
-        <input id="category" type="text" placeholder="category" name="category" value="{{ restaurant.category }}"
-          style="width:200px">
+        <input id="category" type="text" placeholder="category" name="category" class="col-6 form-control mt-2" value="{{ restaurant.category }}" style="width:200px" required>
       </div>
 
-      <div class="row mt-4">
+      <div class="row mt-2">
+        <label class="col-4 text-center" for="image">
+          <h5 class="mt-3">圖片:</h5>
+        </label>
+        <input id="image" type="text" placeholder="image" name="image" class="col-6 form-control mt-2" value="{{ restaurant.image }}" style="width:200px" required>
+      </div>
+
+      <div class="row mt-2">
         <label class="col-4 text-center" for="location">
-          <h4>地點:</h4>
+          <h5 class="mt-3">地點:</h5>
         </label>
-        <input id="location" type="text" placeholder="location" name="location" value="{{ restaurant.location }}"
-          style="width:300px">
+        <input id="location" type="text" placeholder="location" name="location" class="col-6 form-control mt-2" value="{{ restaurant.location }}" style="width:300px" required>
       </div>
 
-      <div class="row mt-4">
+      <div class="row mt-2">
         <label class="col-4 text-center" for="phone">
-          <h4>電話:</h4>
+          <h5 class="mt-3">電話:</h5>
         </label>
-        <input id="phone" type="text" placeholder="phone" name="phone" value="{{ restaurant.phone }}"
-          style="width:200px">
+        <input id="phone" type="text" placeholder="phone" name="phone" class="col-6 form-control mt-2" value="{{ restaurant.phone }}" style="width:200px" required>
+      </div>
+      
+      <div class="row mt-2">
+        <label class="col-4 text-center" for="google_map">
+          <h5 class="mt-3">地圖:</h5>
+        </label>
+        <input id="google_map" type="text" placeholder="google_map" name="google_map" class="col-6 form-control mt-2" value="{{ restaurant.google_map }}" style="width:200px" required>
       </div>
 
-      <div class="row mt-4">
+      <div class="row mt-2">
         <label class="col-4 text-center" for="rating">
-          <h4>評價:</h4>
+          <h5 class="mt-3">評價:</h5>
         </label>
-        <input id="rating" type="text" placeholder="rating" name="rating" value="{{ restaurant.rating }}"
-          style="width:200px">
+        <input id="rating" type="text" placeholder="rating" name="rating" class="col-6 form-control mt-2" value="{{ restaurant.rating }}" style="width:200px" required>
+      </div>
+
+      <div class="row mt-2">
+        <label class="col-4 text-center" for="description">
+          <h5 class="mt-3">描述:</h5>
+        </label>
+        <input id="description" type="text" placeholder="description" name="description" class="col-6 form-control mt-2" value="{{ restaurant.description }}" style="width:200px" required>
       </div>
 
       <div class="mt-5 ml-3 d-flex justify-content-center">
