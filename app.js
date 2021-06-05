@@ -1,22 +1,24 @@
 const express = require('express')
 const app = express()
-const port = 3000
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override') 
 const flash = require('connect-flash')
 const routes = require('./routes')
 const session = require('express-session')
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config()
+}
+
+const PORT = process.env.PORT
 const usePassport = require('./config/passport')
-
-
 require('./config/mongoose')
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main'}))
 app.set('view engine', 'handlebars')
 
 app.use(session({
-  secret: 'ThisIsMySecret',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true
 }))
@@ -37,6 +39,6 @@ app.use((req, res, next) => {
 
 app.use(routes)
 
-app.listen(port, () => {
-  console.log(`Express app listening on port ${port}.`)
+app.listen(PORT, () => {
+  console.log(`Express app listening on port ${PORT}.`)
 })
