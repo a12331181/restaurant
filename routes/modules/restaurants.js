@@ -17,6 +17,7 @@ router.get("/search", (req, res) => {
 })
 
 router.post('/filter', (req, res) => {
+  const userId = req.user._id
   const filterCategory = req.body.filterCategory
   const sortType = {
     "A-Z": ["name_en", "asc"],
@@ -25,7 +26,7 @@ router.post('/filter', (req, res) => {
     "location": ["location", "asc"],
   }
   const [type, method] = sortType[filterCategory]
-  Restaurant.find()
+  Restaurant.find({ userId })
     .sort({ [type]: method })
     .lean()
     .then((restaurants) =>
