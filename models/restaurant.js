@@ -30,13 +30,19 @@ const restaurantSchema = new Schema({
     required: true  
   },
   rating: {
-    type: Number, 
+    type: String, 
     required: true  
   },
   description: {
     type: String, 
     required: true  
   },
+  userId: { 
+    type: Schema.Types.ObjectId,
+    ref: 'User',
+    index: true,
+    required: true
+  }
 })
 
 module.exports = mongoose.model('Restaurant', restaurantSchema)
