@@ -2,6 +2,7 @@
 
 ## A Node.js and Express project.
 ##### Add create,read,update,delete function
+##### Add user authentication function
 
 ### Installation and Execution
 
